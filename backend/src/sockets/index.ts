@@ -2,7 +2,7 @@ import { Server as HttpServer } from 'http';
 import { Server } from 'socket.io';
 import { verifyAccessToken } from '../utils/token.js';
 import { logger } from '../utils/logger.js';
-import { env } from '../config/env.js';
+
 
 export function setupSocketIO(httpServer: HttpServer): Server {
   const io = new Server(httpServer, {
