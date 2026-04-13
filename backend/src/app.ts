@@ -30,7 +30,7 @@ const io = setupSocketIO(httpServer);
 app.set('io', io);
 
 // Middleware
-app.use(cors({ origin: env.CORS_ORIGINS.split(',').map((s) => s.trim()), credentials: true }));
+app.use(cors({ origin: true, credentials: true }));
 app.use(express.json());
 
 // Health check

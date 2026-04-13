@@ -7,7 +7,7 @@ import { env } from '../config/env.js';
 export function setupSocketIO(httpServer: HttpServer): Server {
   const io = new Server(httpServer, {
     cors: {
-      origin: env.CORS_ORIGINS.split(',').map((s) => s.trim()),
+      origin: true,
       methods: ['GET', 'POST'],
     },
   });
